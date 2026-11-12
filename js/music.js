@@ -9,10 +9,9 @@ function initMusic() {
     items.forEach((s, i) => {
       const li = document.createElement("li");
       li.innerHTML = `<span class="n">${pad(i + 1)}</span><span class="c"></span><div><b></b><span class="art"></span><span class="who"></span></div>`;
-      $(".c", li).replaceWith(img(s.coverUrl || "", "Cover", "", 112, 112));
+      $(".c", li).replaceWith(img(coverFor(s), "Cover", "", 112, 112));
       $("b", li).textContent = s.favoriteSong; $(".art", li).textContent = s.artist; $(".who", li).textContent = `dipilih ${s.nickname !== "Panggilan" ? s.nickname : s.name}`;
-      const a = document.createElement("a"); a.className = "btn btn--sm"; a.textContent = "Play"; a.target = "_blank"; a.rel = "noopener";
-      if (s.musicUrl) a.href = s.musicUrl; else a.setAttribute("aria-disabled", "true");
+      const a = document.createElement("button"); a.type = "button"; a.className = "btn btn--sm"; a.textContent = "Play"; a.onclick = () => Player.play(s);
       li.append(a); list.append(li);
     });
   }

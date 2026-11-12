@@ -71,7 +71,7 @@
   <div class="about__grid reveal">
     <dl><dt>Kelas</dt><dd>X PPLG</dd><dt>Sekolah</dt><dd>SMK Muhammadiyah 2 Cibiru</dd><dt>Jumlah siswa</dt><dd>33 siswa</dd></dl>
     <div>
-      <p><!-- GANTI: deskripsi kelas -->Kelas kami jelas asik solid dan ga saling menjatuhkan!</p>
+      <p><!-- GANTI: deskripsi kelas -->Tulis deskripsi singkat kelas di sini.</p>
       <p><!-- GANTI: tujuan dan karakter -->Tulis tujuan dan karakter kelas di sini.</p>
       <blockquote><!-- GANTI: motto -->Motto kelas</blockquote>
     </div>
@@ -80,10 +80,13 @@
 </main>
 <footer class="foot"><p>X PPLG — SMK Muhammadiyah 2 Cibiru</p><p>Class of 2026</p></footer>
 
+<div class="player" id="player" hidden><iframe id="pYt" title="Pemutar YouTube" width="200" height="113" allow="autoplay; encrypted-media" allowfullscreen hidden></iframe><button class="btn btn--sm" id="pBtn" type="button">Jeda</button><div class="player__info"><b id="pTitle"></b><span id="pArtist"></span></div><input type="range" id="pSeek" min="0" max="100" value="0" aria-label="Posisi lagu"><button id="pClose" type="button">Tutup</button></div>
+<button class="sound" id="soundBtn" type="button" hidden aria-pressed="true">Musik latar: On</button>
+<p class="toast" id="toast" role="status" hidden></p>
 <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mName"><div class="modal__panel">
   <button class="modal__close" data-close aria-label="Tutup">Tutup</button>
   <img id="mPhoto" alt=""><div class="modal__body"><p id="mNo"></p><h3 id="mName"></h3><p id="mNick"></p><p id="mBio"></p>
-  <div class="song"><img id="mCover" alt=""><div><p id="mSong"></p><p id="mArtist"></p></div><a class="btn btn--sm" id="mPlay" target="_blank" rel="noopener">Play</a></div></div>
+  <div class="song"><img id="mCover" alt=""><div><p id="mSong"></p><p id="mArtist"></p></div><button class="btn btn--sm" id="mPlay" type="button">Play</button></div></div>
 </div></div>
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto">
   <button class="lightbox__x" data-close aria-label="Tutup">Tutup</button>
@@ -94,7 +97,9 @@
 
 <script src="data/students.js"></script>
 <script src="data/memories.js"></script>
+<script src="data/site.js"></script>
 <script src="js/utils.js"></script>
+<script src="js/audio.js"></script>
 <script src="js/navigation.js"></script>
 <script src="js/animations.js"></script>
 <script src="js/members.js"></script>

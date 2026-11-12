@@ -1,3 +1,9 @@
+// Cover otomatis: pakai coverUrl jika diisi, kalau tidak ambil thumbnail resmi YouTube dari musicUrl.
+function coverFor(s) {
+  if (s.coverUrl) return s.coverUrl;
+  const m = (s.musicUrl || "").match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([\w-]{11})/);
+  return m ? `https://img.youtube.com/vi/${m[1]}/hqdefault.jpg` : "";
+}
 function initMembers() {
   const grid = $("#memberGrid"), modal = $("#modal");
   STUDENTS.forEach((s, idx) => {
@@ -18,12 +24,11 @@ function initMembers() {
   function open(s) {
     last = document.activeElement;
     const old = $("#mPhoto"); old.replaceWith(Object.assign(img(s.photo, s.name, s.name, 600, 800, false), { id: "mPhoto" }));
-    const oc = $("#mCover"); oc.replaceWith(Object.assign(img(s.coverUrl || "", "Cover", "", 112, 112, false), { id: "mCover" }));
+    const oc = $("#mCover"); oc.replaceWith(Object.assign(img(coverFor(s), "Cover", "", 112, 112, false), { id: "mCover" }));
     $("#mNo").textContent = `No. ${pad(s.id)}`; $("#mName").textContent = s.name;
     $("#mNick").textContent = `Panggilan: ${s.nickname}`; $("#mBio").textContent = s.bio;
     $("#mSong").textContent = s.favoriteSong; $("#mArtist").textContent = s.artist;
-    const a = $("#mPlay");
-    if (s.musicUrl) { a.href = s.musicUrl; a.removeAttribute("aria-disabled"); } else { a.removeAttribute("href"); a.setAttribute("aria-disabled", "true"); }
+    $("#mPlay").onclick = () => Player.play(s);
     trapOpen(modal); $(".modal__close").focus();
   }
   const close = () => { trapClose(modal); last && last.focus(); };

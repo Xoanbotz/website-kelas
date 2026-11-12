@@ -1,17 +1,39 @@
-// Ganti isi data ini. Foto: assets/images/members/student-XX.jpg
-// musicUrl: tautan resmi Spotify / YouTube Music. coverUrl: opsional.
-window.STUDENTS = Array.from({ length: 33 }, (_, i) => {
-  const n = String(i + 1).padStart(2, "0");
-  return {
-    id: i + 1,
-    name: `Student ${n}`,
-    nickname: "Panggilan",
-    photo: `assets/images/members/student-${n}.jpg`,
-    favoriteSong: "Judul Lagu",
-    artist: "Nama Artis",
-    musicUrl: "",
-    coverUrl: "",
-    featured: false,
-    bio: "Deskripsi singkat."
-  };
-});
+// Satu baris = satu siswa. Tinggal ganti isinya.
+// musicUrl: tempel link YouTube / YouTube Music / TikTok / Spotify (link satu lagu, bukan playlist).
+//   YouTube: cover diambil otomatis. TikTok/Spotify: cover kosong kecuali kamu isi coverUrl.
+// featured: true = muncul di tab Favorite Tracks.
+window.STUDENTS = [
+  { id: 1, name: "Student 01", nickname: "Panggilan", photo: "assets/images/members/student-01.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 2, name: "Student 02", nickname: "Panggilan", photo: "assets/images/members/student-02.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 3, name: "Student 03", nickname: "Panggilan", photo: "assets/images/members/student-03.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 4, name: "Student 04", nickname: "Panggilan", photo: "assets/images/members/student-04.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 5, name: "Student 05", nickname: "Panggilan", photo: "assets/images/members/student-05.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 6, name: "Student 06", nickname: "Panggilan", photo: "assets/images/members/student-06.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 7, name: "Student 07", nickname: "Panggilan", photo: "assets/images/members/student-07.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 8, name: "Student 08", nickname: "Panggilan", photo: "assets/images/members/student-08.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 9, name: "Student 09", nickname: "Panggilan", photo: "assets/images/members/student-09.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 10, name: "Student 10", nickname: "Panggilan", photo: "assets/images/members/student-10.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 11, name: "Student 11", nickname: "Panggilan", photo: "assets/images/members/student-11.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 12, name: "Student 12", nickname: "Panggilan", photo: "assets/images/members/student-12.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 13, name: "Student 13", nickname: "Panggilan", photo: "assets/images/members/student-13.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 14, name: "Student 14", nickname: "Panggilan", photo: "assets/images/members/student-14.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 15, name: "Student 15", nickname: "Panggilan", photo: "assets/images/members/student-15.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 16, name: "Student 16", nickname: "Panggilan", photo: "assets/images/members/student-16.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 17, name: "Student 17", nickname: "Panggilan", photo: "assets/images/members/student-17.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 18, name: "Student 18", nickname: "Panggilan", photo: "assets/images/members/student-18.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 19, name: "Student 19", nickname: "Panggilan", photo: "assets/images/members/student-19.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 20, name: "Student 20", nickname: "Panggilan", photo: "assets/images/members/student-20.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 21, name: "Muhamad Fadhil Hidayat", nickname: "Dul/Dil", photo: "assets/images/members/student-21.jpg", favoriteSong: "Line Without A Hook", artist: "Ricky Montgomery", musicUrl: "https://youtu.be/8JW6qzPCkE8?si=X2i1E_3BjSphIycr", coverUrl: "", featured: false, bio: "Hobi aku bermain dan coding sendiri bersama teman juga suka sih." },
+  { id: 22, name: "Student 22", nickname: "Panggilan", photo: "assets/images/members/student-22.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 23, name: "Student 23", nickname: "Panggilan", photo: "assets/images/members/student-23.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 24, name: "Student 24", nickname: "Panggilan", photo: "assets/images/members/student-24.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 25, name: "Student 25", nickname: "Panggilan", photo: "assets/images/members/student-25.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 26, name: "Student 26", nickname: "Panggilan", photo: "assets/images/members/student-26.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 27, name: "Student 27", nickname: "Panggilan", photo: "assets/images/members/student-27.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 28, name: "Student 28", nickname: "Panggilan", photo: "assets/images/members/student-28.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 29, name: "Student 29", nickname: "Panggilan", photo: "assets/images/members/student-29.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 30, name: "Student 30", nickname: "Panggilan", photo: "assets/images/members/student-30.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 31, name: "Student 31", nickname: "Panggilan", photo: "assets/images/members/student-31.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 32, name: "Student 32", nickname: "Panggilan", photo: "assets/images/members/student-32.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." },
+  { id: 33, name: "Student 33", nickname: "Panggilan", photo: "assets/images/members/student-33.jpg", favoriteSong: "Judul Lagu", artist: "Nama Artis", musicUrl: "", coverUrl: "", featured: false, bio: "Deskripsi singkat." }
+];

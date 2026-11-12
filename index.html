@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X PPLG — SMK Muhammadiyah 2 Cibiru</title>
+<meta name="description" content="Arsip digital kelas X PPLG, SMK Muhammadiyah 2 Cibiru.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="is-locked">
+<section class="intro" id="intro" aria-label="Halaman pembuka">
+  <div class="intro__bg" style="background-image:url('assets/images/class/class-photo.jpg')"></div>
+  <div class="intro__grain"></div>
+  <div class="intro__inner">
+    <p class="intro__kicker rv">Welcome to</p>
+    <h1 class="intro__title rv">X PPLG</h1>
+    <p class="intro__school rv">SMK Muhammadiyah 2 Cibiru</p>
+    <p class="intro__year rv">Class of 2026</p>
+    <button class="btn rv" id="enter" type="button">Explore our class</button>
+  </div>
+</section>
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#home">X PPLG</a>
+  <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="Buka menu"><span></span><span></span></button>
+  <nav aria-label="Utama"><ul class="nav__list" id="navList">
+    <li><a href="#home">Home</a></li><li><a href="#members">Our Members</a></li><li><a href="#memories">Memories</a></li><li><a href="#music">Music</a></li><li><a href="#about">About</a></li>
+  </ul><span class="nav__bar" id="navBar"></span></nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <span class="hero__num" aria-hidden="true">X</span>
+  <div class="hero__text">
+    <h2 class="hero__title reveal">We are<br>X PPLG.</h2>
+    <p class="hero__desc reveal">Kelas Pengembangan Perangkat Lunak dan Gim di SMK Muhammadiyah 2 Cibiru. Arsip ini menyimpan wajah, lagu, dan kenangan kami.</p>
+    <div class="hero__meta reveal"><p><strong>33</strong> Members</p><p><strong>2026</strong> Angkatan</p></div>
+    <a class="btn" href="#members">Explore members</a>
+  </div>
+  <figure class="hero__photo reveal"><img data-ph="Foto kelas" src="assets/images/class/class-photo.jpg" alt="Foto bersama kelas X PPLG" data-parallax="0.06"></figure>
+</section>
+
+<section class="sec" id="members">
+  <div class="sec__head reveal"><h2>Our Members</h2><p>33 siswa. Klik kartu untuk membuka profil.</p></div>
+  <div class="members" id="memberGrid"></div>
+</section>
+
+<section class="sec sec--alt" id="memories">
+  <div class="sec__head reveal"><h2>Memories</h2><p>Galeri kenangan kelas.</p></div>
+  <div class="tabs" id="galleryTabs" role="tablist"></div>
+  <div class="masonry" id="masonry"></div>
+</section>
+
+<section class="sec" id="music">
+  <div class="sec__head reveal"><h2>Music</h2><p>Satu lagu dari setiap anggota. Tombol Play membuka Spotify atau YouTube Music.</p></div>
+  <div class="tabs" id="musicTabs" role="tablist"></div>
+  <ol class="tracks" id="trackList"></ol>
+</section>
+
+<section class="sec sec--alt about" id="about">
+  <div class="sec__head reveal"><h2>About</h2></div>
+  <div class="about__grid reveal">
+    <dl><dt>Kelas</dt><dd>X PPLG</dd><dt>Sekolah</dt><dd>SMK Muhammadiyah 2 Cibiru</dd><dt>Jumlah siswa</dt><dd>33 siswa</dd></dl>
+    <div>
+      <p><!-- GANTI: deskripsi kelas -->Kelas kami jelas asik solid dan ga saling menjatuhkan!</p>
+      <p><!-- GANTI: tujuan dan karakter -->Tulis tujuan dan karakter kelas di sini.</p>
+      <blockquote><!-- GANTI: motto -->Motto kelas</blockquote>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot"><p>X PPLG — SMK Muhammadiyah 2 Cibiru</p><p>Class of 2026</p></footer>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mName"><div class="modal__panel">
+  <button class="modal__close" data-close aria-label="Tutup">Tutup</button>
+  <img id="mPhoto" alt=""><div class="modal__body"><p id="mNo"></p><h3 id="mName"></h3><p id="mNick"></p><p id="mBio"></p>
+  <div class="song"><img id="mCover" alt=""><div><p id="mSong"></p><p id="mArtist"></p></div><a class="btn btn--sm" id="mPlay" target="_blank" rel="noopener">Play</a></div></div>
+</div></div>
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto">
+  <button class="lightbox__x" data-close aria-label="Tutup">Tutup</button>
+  <button class="lightbox__nav" id="lbPrev" aria-label="Sebelumnya">Prev</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lightbox__nav" id="lbNext" aria-label="Berikutnya">Next</button>
+</div>
+
+<script src="data/students.js"></script>
+<script src="data/memories.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/members.js"></script>
+<script src="js/music.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

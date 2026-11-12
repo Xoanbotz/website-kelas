@@ -1,0 +1,7 @@
+body{background:var(--bg);color:var(--text);font:400 1rem/1.7 var(--f-body);overflow-x:hidden}
+body.is-locked{overflow:hidden}
+h1,h2,h3{font-family:var(--f-head);font-weight:500;line-height:1;letter-spacing:-.02em}
+p{max-width:62ch}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+::selection{background:var(--accent);color:var(--bg)}
+html{scroll-padding-top:var(--nav-h)}
